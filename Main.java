@@ -56,6 +56,7 @@ class AVL extends BinarySearchTree {
     }
 
     // Check balance factor
+    // TODO: Optimize height calculation
     int leftHeight = _height(root.left);
     int rightHeight = _height(root.right);
     int balanceFactor = leftHeight - rightHeight;
@@ -81,6 +82,7 @@ class AVL extends BinarySearchTree {
     return root;
   }
   private Node _remove(Node root, int key) {
+    // TODO: Check BF while coming up
     if(root == null) {
       return null;
     }
